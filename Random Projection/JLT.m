@@ -35,26 +35,8 @@ if(k > d)
     error('Epsilon too low')
 end
 
-%transformMat = zeros(k,d);
-%decision = rand(k,d);
-%transformMat(decision < 1/2) = 1;
-
-%G = randn(d,k);
-%[Q,R] = qr(G);
-%transformMat = Q';
-
-tmp = rand(d,1); tmp = 2*(tmp>1/2)-1;
-tmp = diag(tmp);
-F = exp(2*pi*i*([0:d-1]'*[0:d-1]/d));
-aux = ceil(rand(k,1)*k);
-F = F(aux,:);
-aux
-size(F)
-size(tmp)
-transformMat = F*tmp;
-
-
-
-
+G = randn(d,k);
+Q = orth(G);
+transformMat = Q';
 
 end
