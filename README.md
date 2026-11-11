@@ -44,7 +44,3 @@ where `projection_type` is one of `'FJLT'` (the default), `'JLT'`, `'ACH'`, `'LH
 | [`FJLT.m`](Random%20Projection/FJLT.m) | fast Johnson–Lindenstrauss transform of Ailon and Chazelle |
 | [`project.m`](Random%20Projection/project.m) | projected inner products of the rows of `A` and the columns of `B` |
 | [`test_script.m`](Random%20Projection/test_script.m) | speed and accuracy test |
-
-## Authors and citation
-
-The code is by **Ahmed Bou-Rabee**.
