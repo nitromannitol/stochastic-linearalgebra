@@ -7,18 +7,22 @@ product `A·B` from projected inner products of the rows of `A` and the columns 
 
 ## Running
 
-The code dates from May 2014. From MATLAB, change into the `Random Projection`
-directory and run the test script:
+The code dates from May 2014. From MATLAB, change into the `Random Projection` directory:
 
 ```matlab
 cd 'Random Projection'
-test_script
 ```
 
-[`test_script.m`](Random%20Projection/test_script.m) draws random matrices `A` of size
-`2000 × 1000` and `B` of size `1000 × 2000` with independent normal entries of standard
-deviation `1000`, times `getKLargestMatrixMultiply` against the brute-force computation of
-`A*B`, compares their outputs, and times the construction of the projection matrices.
+[`test_script.m`](Random%20Projection/test_script.m) has three sections, separated by `%%`.
+The first draws random matrices `A` of size `2000 × 1000` and `B` of size `1000 × 2000` with
+independent normal entries of standard deviation `1000`, times `getKLargestMatrixMultiply`
+(with `k = 10` and the `'JLT'` projection) and the brute-force computation of `A*B`, and
+prints the `k` largest entries from both for comparison. The second times ten constructions of
+`ACH(n, d, epsilon)` with `d = 1000`; the script assigns neither `n` nor `epsilon`, so this
+section needs both to be set first. The third estimates the error of the `'FJLT'` projection
+as the average of `norm(maxVals - kLargest)/norm(maxVals)` over 50 draws of `500 × 256` and
+`256 × 500` matrices with entries of standard deviation `50`; its comment gives about 1 as the
+error of simply taking the first `k` entries of `A*B`.
 
 To use the method directly:
 
