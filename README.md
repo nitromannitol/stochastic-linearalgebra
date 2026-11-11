@@ -7,8 +7,7 @@ product `A·B` from projected inner products of the rows of `A` and the columns 
 
 ## Running
 
-The repository does not record which MATLAB release the code was written for; it dates from
-May 2014 and declares no toolboxes. From MATLAB, change into the `Random Projection`
+The code dates from May 2014. From MATLAB, change into the `Random Projection`
 directory and run the test script:
 
 ```matlab
@@ -44,8 +43,7 @@ where `projection_type` is one of `'FJLT'` (the default), `'JLT'`, `'ACH'`, `'LH
 
 ## Authors and citation
 
-The code is by **Ahmed Bou-Rabee**. There is no associated paper, so the repository has no
-`CITATION.cff`.
+The code is by **Ahmed Bou-Rabee**.
 
 ## License
 
